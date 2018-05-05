@@ -1,0 +1,43 @@
+<section>
+        <h4  class="alert alert-info" role="alert"> Candidate List </h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th ng-if="columnList.name">
+                        <strong>Candidate Name</strong>
+                    </th>
+                    <th ng-if="columnList.experience">
+                        <strong>Experience</strong>
+                    </th>
+                    <th ng-if="columnList.jobLocation">
+                        <strong>Job Location</strong>
+                    </th>
+                    <th ng-if="columnList.joinDate"> 
+                        <strong>Joining Date</strong>
+                    </th>
+                    <th ng-if="columnList.skills">
+                        <strong>Skills</strong>
+                    </th>
+                    <th ng-if="columnList.gender">
+                        <strong>Gender</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="candidate in candidateList">
+                    <td ng-if="columnList.name">{{candidate.name}}</td>
+                    <td ng-if="columnList.experience">{{candidate.experience}} years</td>
+                    <td ng-if="columnList.jobLocation">{{candidate.jobLocation}} </td>
+                    <td ng-if="columnList.joinDate">{{fixDate(candidate.joinDate) | date:  "MMMM d, y"}} </td>
+                    <td ng-if="columnList.skills">
+                        <span ng-if="candidate.skills.java">Java, </span>
+                        <span ng-if="candidate.skills.python">Python, </span>
+                        <span ng-if="candidate.skills.html">HTML, </span>
+                        <span ng-if="candidate.skills.css">CSS, </span>
+                        <span ng-if="candidate.skills.javascript">Javascript</span>
+                    </td>
+                    <td ng-if="columnList.gender">{{candidate.gender}} </td>
+                </tr>
+            </tbody>
+        </table>
+</section>

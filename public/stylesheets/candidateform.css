@@ -1,0 +1,33 @@
+.candidateform .table{
+    margin-left: 50px;
+}
+.candidateform .table td{
+ width: 1rem;
+}
+.candidateform .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    border-top: none;
+}
+.form-control{
+    width: 35%;
+}
+.bg-info{
+    padding: 20px 10px;
+}
+.candidateform{
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+}
+.action-btns{
+    margin: 20px 0;
+}
+.action-btns input{
+    width: 120px;
+}
+
+.configtable input[text]{
+    width: 50%;
+}
+.updateColumn{
+    margin-top: 50px;
+    width: 150px;
+}

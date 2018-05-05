@@ -1,0 +1,52 @@
+<section class="configtable">
+    <h4 class="alert alert-info" role="alert"> Table Config </h4>
+    <form>
+
+        <div class="input-group">
+            <label>NOTE: Uncheck the columns you want to hide</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.name">
+            </span>
+            <input type="text" class="form-control" value="Candidate Name" disabled>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.experience">
+            </span>
+            <input type="text" class="form-control" value="Experience" disabled>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.jobLocation">
+            </span>
+            <input type="text" class="form-control" value="Job Location" disabled>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.joinDate">
+            </span>
+            <input type="text" class="form-control" value="Joining Date" disabled>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.skills">
+            </span>
+            <input type="text" class="form-control" value="Skills" disabled>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-model="columns.gender">
+            </span>
+            <input type="text" class="form-control" value="Gender" disabled>
+        </div>
+    </form>
+
+    <button class="btn btn-success updateColumn" ng-click="updateColumns()">Update Table</button>
+</section>
