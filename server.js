@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var bodyparser = require('body-parser');
 var cors = require('cors');
 var path = require('path');
+var http = require('http');
 
 var app = express();
 
@@ -38,9 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', route);
 
 //listening to port
-app.listen(port, hostname, () => {
-    console.log('Server started at port:' + port);
+var server = https.createServer(app).listen(port, hostname, function() {
+    console.log('Https App started');
 });
-
 
 
