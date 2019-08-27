@@ -25,7 +25,7 @@ mongoose.connection.on('error',(err)=>{
 
 //port no ::
 const hostname = 'http://ec2-54-208-93-112.compute-1.amazonaws.com/';
-const port = 3000;
+const port = 80;
 
 //adding middleware
 app.use(cors());
@@ -39,8 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', route);
 
 //listening to port
-var server = http.createServer(app).listen(port, hostname, function() {
-    console.log('Https App started');
+app.listen(port, () => {
+    console.log('Server started at port:' + port);
 });
 
 
