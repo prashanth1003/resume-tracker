@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', route);
 
 //listening to port
-var server = https.createServer(app).listen(port, hostname, function() {
+var server = http.createServer(app).listen(port, hostname, function() {
     console.log('Https App started');
 });
 
