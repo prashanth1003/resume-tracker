@@ -23,6 +23,7 @@ mongoose.connection.on('error',(err)=>{
 });
 
 //port no ::
+const hostname = 'http://ec2-54-208-93-112.compute-1.amazonaws.com/';
 const port = 3000;
 
 //adding middleware
@@ -37,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', route);
 
 //listening to port
-app.listen(port, () => {
+app.listen(port, hostname, () => {
     console.log('Server started at port:' + port);
 });
 
